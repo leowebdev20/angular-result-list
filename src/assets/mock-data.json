@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Tariff 1",
+    "downloadSpeed": "100 Mbps",
+    "uploadSpeed": "50 Mbps",
+    "price": 50
+  },
+  {
+    "name": "Tariff 2",
+    "downloadSpeed": "200 Mbps",
+    "uploadSpeed": "100 Mbps",
+    "price": 70
+  },
+  {
+    "name": "Tariff 3",
+    "downloadSpeed": "50 Mbps",
+    "uploadSpeed": "20 Mbps",
+    "price": 40
+  }
+]

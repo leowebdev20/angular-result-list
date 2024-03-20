@@ -1,0 +1,34 @@
+body {
+  font-family: "Montserrat", sans-serif; /* Use Montserrat font as the default font for the entire application */
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.app-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9f5656; /* Dark color for title */
+  margin-bottom: 20px;
+}

@@ -1,0 +1,98 @@
+/* filter styiling */
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  flex-wrap: wrap;
+
+  label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .filter-control {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    width: 30%;
+  }
+}
+
+/* Result List */
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.result-item {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+}
+
+.result-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.tariff-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.speed {
+  color: #007bff;
+}
+
+.price {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.no-results {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 767px) {
+  .filter-control {
+    width: 100% !important;
+  }
+}
+
+/* Skeleton styling */
+.skeleton-loading {
+  animation: skeleton-loading 1.5s ease-in-out infinite alternate;
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+@keyframes skeleton-loading {
+  to {
+    background-position: -200% 0;
+  }
+}

@@ -1,0 +1,70 @@
+<div>
+  <div class="filter-controls">
+    <div class="filter-control">
+      <label>Filter by Download Speed:</label>
+      <select (change)="filterByDownloadSpeed($event)" #downloadSelect>
+        <option value="">All</option>
+        <option value="50 Mbps">50 Mbps</option>
+        <option value="100 Mbps">100 Mbps</option>
+        <option value="200 Mbps">200 Mbps</option>
+      </select>
+    </div>
+
+    <div class="filter-control">
+      <label>Filter by Upload Speed:</label>
+      <select (change)="filterByUploadSpeed($event)" #uploadSelect>
+        <option value="">All</option>
+        <option value="10 Mbps">10 Mbps</option>
+        <option value="20 Mbps">20 Mbps</option>
+        <option value="50 Mbps">50 Mbps</option>
+        <option value="100 Mbps">100 Mbps</option>
+      </select>
+    </div>
+
+    <div class="filter-control">
+      <label>Filter by Price:</label>
+      <select (change)="filterByPrice($event)" #priceSelect>
+        <option value="">All</option>
+        <option value="40">$40</option>
+        <option value="50">$50</option>
+        <option value="70">$70</option>
+        <option value="100">$100</option>
+      </select>
+    </div>
+  </div>
+
+  @if (!loading()) {
+  <div>
+    @if (filteredTariffs.length > 0) {
+    <div class="result-list">
+      @for (tariff of filteredTariffs; track tariff) {
+      <div class="result-item">
+        <p class="tariff-name">{{ tariff.name }}</p>
+        <p>
+          Download Speed: <span class="speed">{{ tariff.downloadSpeed }}</span>
+        </p>
+        <p>
+          Upload Speed: <span class="speed">{{ tariff.uploadSpeed }}</span>
+        </p>
+        <p>
+          Price:
+          <span class="price">${{ tariff.price }}</span>
+        </p>
+      </div>
+      }
+    </div>
+    } @else {
+    <p class="no-results">No results found.</p>
+    }
+  </div>
+  } @else {
+  <div class="result-list">
+    <div class="filter-dropdowns">
+      <div class="skeleton-loading" style="width: 70%; height: 50px"></div>
+      <div class="skeleton-loading" style="width: 70%; height: 50px"></div>
+      <div class="skeleton-loading" style="width: 50%; height: 50px"></div>
+      <div class="skeleton-loading" style="width: 30%; height: 50px"></div>
+    </div>
+  </div>
+  }
+</div>
